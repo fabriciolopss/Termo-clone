@@ -1,0 +1,28 @@
+.letter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:55px;
+    height: 55px;
+    border: 5px solid #4C4347;
+    margin:  0 2px;
+    border-radius:5px;
+    font-size:45px;
+    color:white;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#correct{
+    border:5px solid #3AA394 ;
+    background-color: #3AA394;
+}
+
+#almost{
+    border:5px solid #D3AD69 ;
+    background-color: #D3AD69;
+}
+
+#error{
+    border:5px solid #312A2C ;
+    background-color: #312A2C;
+}

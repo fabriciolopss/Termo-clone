@@ -1,0 +1,61 @@
+.key{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:55px;
+    height: 55px;
+    background-color: #4C4347;
+    margin:  0 2px;
+    border-radius:5px;
+    font-size:25px;
+    color:white;
+    cursor:pointer;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.key:hover{
+    background-color: rgb(70, 59, 62);
+    transform:scale(1.03); 
+}
+
+.line1, .line2, .line3{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:6px;
+}
+
+.deleteKey{
+    margin-left:20px;
+}
+
+#big{
+    text-transform: uppercase;
+    margin-left:20px;
+    width: 140px;
+}
+
+.selected .letter{
+    transition:1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom:9px #4C4347 solid;
+    animation: popup 0.7s;
+}
+
+@keyframes popup {
+    0% {
+      transform: scale(1); /* Comece com tamanho zero */
+      transform: translate(0px, -6px); /* Mova um pouco para cima e para a esquerda */
+      transform-origin: center;
+    }
+    50% {
+      transform: translate(0px, 6px); /* Mova um pouco para cima e para a esquerda */
+      transform:scale(1.02);
+      transform-origin: center;
+    }
+    100% {
+      transform: scale(1); /* Volte ao tamanho original */
+      transform: translate(0px, 0px); /* Mova um pouco para cima e para a esquerda */
+      transform-origin: center;
+    }
+  }

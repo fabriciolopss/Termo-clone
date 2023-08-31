@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+.alertBox{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alertBoxWrapper{
+    background-color: #312B2D;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:12px;
+    width:40%;
+    height: 45%;
+}
+
+.message{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:50%;
+}
+
+.closeButtonWrapper{
+    display:flex;
+    justify-content: flex-end;
+    height: 10%;
+}
+
+.closeButton{
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #009AFE;
+    padding:5px 10px;
+    border-radius:10px;
+    font-size: 1.5em;
+    color:white;
+    cursor: pointer;
+    transition:1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.closeButton:hover{
+    background-color: #3AA394;
+    transform:scale(1.02);
+}
