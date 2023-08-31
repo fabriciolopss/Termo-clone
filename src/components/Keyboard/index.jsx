@@ -1,15 +1,15 @@
-import React, { useCallback, useContext, useEffect } from 'react'
+import React, { useCallback, useContext, useEffect,useMemo } from 'react'
 import Key from '../Key'
 import "./styles.css"
 import { appContext } from '../../App'
 
 function Keyboard() {
   
-  const rows = [
+  const rows = useMemo(() =>[
     "QWERTYUIOP",
     "ASDFGHJKL",
     "ZXCVBNM"
-  ]
+  ], []);
 
   const { onDeleteLetter, onEnterWord, onSelectLetter, disabledLetters } = useContext(appContext);
 
@@ -27,7 +27,7 @@ function Keyboard() {
         })
       }
     }
-  })
+  }, [onDeleteLetter, onEnterWord, onSelectLetter, rows])
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyboard);

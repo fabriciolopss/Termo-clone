@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { appContext } from '../../App'
 import "./styles.css"
 function GameOver() {
-    const {gameOver, currentAttempt, correctWord} = useContext(appContext)
+    const {gameOver, correctWord} = useContext(appContext)
     const elogios = [
         "Espetacular",
         "Incrível",
